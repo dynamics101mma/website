@@ -1,0 +1,6 @@
+export enum MainComponentContextType {
+    ABOUTUS = 'ABOUTUS',
+    CLUBS = 'CLUBS',
+    CONTACT = 'CONTACT',
+    HOME = 'HOME'
+}
