@@ -3,7 +3,7 @@ import { Avatar, Blockquote } from "flowbite-react";
 
 export function Motto() {
   return (
-    <div className="mx-auto max-w-screen-md text-center flex flex-col gap-2">
+    <div className="mx-auto max-w-screen-md text-center flex flex-col gap-1">
       <svg
         className="mx-auto mb-3 h-10 w-10 text-gray-400"
         aria-hidden="true"
@@ -18,9 +18,9 @@ export function Motto() {
           It Takes 21 Days to Build a Habit, and 90 Days to Build a Lifestyle
         </p>
       </div>
-        <div className="flex items-center justify-center divide-x-2">
+        {/* <div className="flex items-center justify-center divide-x-2">
           <cite className="pr-3 font-medium text-white">Dr. Maxwell Maltz's</cite>
-        </div>
+        </div> */}
     </div>
   );
 }

@@ -31,9 +31,9 @@ export function Home() {
     return (
         <div className='w-full h-full relative pattern-bg-black pattern-zigzag-3d  pattern-gray-800 pattern-opacity-80  pattern-size-8 flex flex-col items-center justify-center'>
             <div className=' relative flex flex-col items-center justify-center'>
-                {/* <div className='w-[80vw] flex items-center justify-center p-3'>
+                <div className='w-[80vw] flex items-center justify-center p-3'>
                     <Motto />
-                </div> */}
+                </div>
                 <div className='w-[90vw] h-[80vh] bg-transparent rounded-md'>
                     <CarouselComponent images={images} slideInterval={4000} className='h-[79vh]' />
                 </div>

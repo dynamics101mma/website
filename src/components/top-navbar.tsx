@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import dynamics_logo from '../assets/dynamics_logo.png';
+import { useMainComponent } from '../context/mainComponent.context';
+import { MainComponentContextType } from '../constants/page-constants';
 
 
 function TopNavbar() {
+  const mainComponent = useMainComponent();
+
     return (
         <nav className="bg-[#161615] border-[#f9d112] border-b-2">
             <div className=" px-10 flex flex-wrap items-center mx-auto p-4  justify-between">
-                <a href="#" className="flex items-center  space-x-5 pl-4 rtl:space-x-reverse ">
+                <a onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.HOME)}} href="#" className="flex items-center  space-x-5 pl-4 rtl:space-x-reverse ">
                     <img src={dynamics_logo} className="h-10 w-10" alt="Flowbite Logo" />
                     <span className=" font-black_ops_one self-center md:text-2xl text-xl whitespace-nowrap text-white">DYNAMICS 101 MMA</span>
                 </a>
@@ -19,14 +23,14 @@ function TopNavbar() {
                 <div className="hidden w-full md:flex md:w-auto">
                     <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[#161615] md:bg-[#161615] border-gray-700">
                         <li>
-                            <a href="#" className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Home</a>
+                            <a href="#" onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.HOME)}} className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Home</a>
                         </li>
                         <li>
-                            <a href="#" className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">About Us</a>
+                            <a href="#" onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.ABOUTUS)}} className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">About Us</a>
                         </li><li>
-                            <a href="#" className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Clubs</a>
+                            <a href="#" onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.CLUBS)}} className=" hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Clubs</a>
                         </li><li>
-                            <a href="#" className="hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Contact Us</a>
+                            <a href="#" onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.CONTACT)}} className="hover:text-[#f9d112] block py-2 px-3 text-white rounded md:bg-transparent md:p-0 font-semibold" aria-current="page">Contact Us</a>
                         </li>
                     </ul>
                 </div>

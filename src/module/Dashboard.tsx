@@ -1,28 +1,31 @@
 import React from 'react'
 import TopNavbar from '../components/top-navbar';
 import { Home } from '../components/Home';
+import { MainComponentContextType } from '../constants/page-constants';
+import { useMainComponent } from '../context/mainComponent.context';
+import { Clubs } from '../components/Clubs';
+import { AboutUs } from '../components/About-us';
+import { Contact } from '../components/Contact';
 
 
 export default function Dashboard() {
+  const component = useMainComponent()
   const renderComponent = () => {
-    // switch (component?.mainComponent) {
-    //   case MainComponentContextType.EDUCATION:
-    //     return <div className="sm:p-4"><EducationScreen/></div>
-    //   case MainComponentContextType.CONTACT:
-    //     return <div className="p-4"><ContactScreen/></div>
-    //   case MainComponentContextType.EXPERIENCE:
-    //     return <div className="sm:p-4"><ExperienceScreen/></div>
-    //   case MainComponentContextType.SKILLS:
-    //     return <div className="sm:px-4 bg-slate-950 xl:px-16 "><SkillsScreen/></div>
-    //   default:
-    //     return <div className="p-4"><Home/></div>
-    // }
-    return <Home/>
+    switch (component?.mainComponent) {
+      case MainComponentContextType.ABOUTUS:
+        return <div><AboutUs/></div>
+      case MainComponentContextType.CONTACT:
+        return <div><Contact/></div>
+      case MainComponentContextType.CLUBS:
+        return <div><Clubs/></div>
+      default:
+        return <div><Home/></div>
+    }
   }
 
   return (
     <>
-      <div className="bg-[#21201e] h-screen w-screen flex flex-col justify-between">
+      <div className="bg-[#21201e] flex flex-col justify-between">
         <TopNavbar />
         {renderComponent()}
         {/* <Footer /> */}
