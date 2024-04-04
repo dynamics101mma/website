@@ -4,6 +4,7 @@ import './App.css';
 import TopNavbar from './components/top-navbar';
 import Dashboard from './module/Dashboard';
 import { MainComponentContextProvider } from './context/mainComponent.context';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <div>
         <Dashboard />
       </div>
+      <Footer/>
     </MainComponentContextProvider>
   )
 }

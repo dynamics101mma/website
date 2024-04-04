@@ -8,6 +8,7 @@ import { AboutUs } from '../components/About-us';
 import { Contact } from '../components/Contact';
 
 
+
 export default function Dashboard() {
   const component = useMainComponent()
   const renderComponent = () => {
@@ -28,7 +29,7 @@ export default function Dashboard() {
       <div className="bg-[#21201e] flex flex-col justify-between">
         <TopNavbar />
         {renderComponent()}
-        {/* <Footer /> */}
+       
       </div>
     </>
   )
