@@ -3,7 +3,7 @@ import { Avatar, Blockquote } from "flowbite-react";
 
 export function Motto() {
   return (
-    <div className="mx-auto max-w-screen-md text-center flex flex-col gap-1">
+    <div className="mx-auto max-w-screen text-center flex flex-col gap-1">
       <svg
         className="mx-auto mb-3 h-10 w-10 text-gray-400"
         aria-hidden="true"

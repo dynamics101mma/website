@@ -12,7 +12,6 @@ export default function App() {
       <div>
         <Dashboard />
       </div>
-      <Footer/>
     </MainComponentContextProvider>
   )
 }

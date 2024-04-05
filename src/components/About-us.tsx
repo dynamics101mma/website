@@ -18,7 +18,7 @@ export function AboutUs() {
     }, [images.length]);
 
     return (
-        <div className='pattern-bg-black pattern-zigzag-3d pattern-gray-800 pattern-opacity-80 pattern-size-8' style={{ position: 'relative', padding: '10px' }}>
+        <div className='bg-black' style={{ position: 'relative', padding: '10px' }}>
             <div className="text-white text-justify" style={{ maxWidth: '800px', margin: 'auto' }}>
                 <h1 style={{ fontSize: '1.9rem', fontWeight: 'bold' ,letterSpacing:'1px', textAlign: 'center'}}>
                     <span style={{ color: 'yellow' }}>Dynamics 101 MMA:</span> Forging Champions in Chennai's Combat Sports Scene
