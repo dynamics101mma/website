@@ -18,12 +18,20 @@ const footerStyle: React.CSSProperties = {
 const containerStyle: React.CSSProperties = {
   maxWidth: '960px',
   margin: '0 auto',
+  padding: '0 20px', // Added padding
 };
 
 const iconStyle: React.CSSProperties = {
   fontSize: '2rem',
   margin: '0 10px',
   color: 'yellow',
+};
+
+const linkStyle: React.CSSProperties = {
+  color: 'white',
+  textDecoration: 'none',
+  margin: '0 10px',
+  padding: '5px 10px', // Added padding
 };
 
 function Footer() {
@@ -38,6 +46,11 @@ function Footer() {
           <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><YouTubeIcon style={iconStyle} /></a>
           <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"><WhatsAppIcon style={iconStyle} /></a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><LinkedInIcon style={iconStyle} /></a>
+        </div>
+        <div>
+          <a href="/refund-cancellation" style={linkStyle}>Refund and Cancellation Policy</a>
+          <a href="/terms-of-use" style={linkStyle}>Terms of Use</a>
+          <a href="/privacy-policy" style={linkStyle}>Privacy Policy</a>
         </div>
       </div>
     </footer>
