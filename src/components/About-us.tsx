@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import aboutOne from '../assets/aboutOne.jpg';
 import aboutTwo from '../assets/aboutTwo.jpg';
 import aboutThree from '../assets/aboutThree.jpg';
+import aboutFour from '../assets/aboutFour.jpg';
+import aboutFive from '../assets/aboutFive.jpg';
 import { Button } from "flowbite-react";
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
@@ -55,8 +57,8 @@ export function AboutUs() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showImage, setShowImage] = useState(false);
   const [showTitle, setShowTitle] = useState(true);
-  const images = [aboutOne, aboutTwo, aboutThree];
-  const titles = ["BOXING", "MMA", "KICKBOXING"];
+  const images = [aboutOne, aboutTwo, aboutThree, aboutFour,aboutFive];
+  const titles = ["BOXING", "MMA", "KICKBOXING", "MUAY THAI", "CALISTHENICS"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -81,7 +83,7 @@ export function AboutUs() {
         <h1 style={{ fontSize: '1.9rem', fontWeight: 'bold' ,letterSpacing:'1px', textAlign: 'center'}}>
           <span style={{ color: 'yellow' }}>Dynamics 101 MMA:</span> Forging Champions in Chennai's Combat Sports Scene
         </h1>
-        <p style={{ letterSpacing:'1px', textAlign: 'justify' }}>
+        <p className="mt-4"style={{textAlign:'center'}}>
           Established in 2019 by the formidable coach Nishanth, a former national MMA champion and revered gym trainer, Dynamics 101 MMA stands as one of the most dominating striking-based MMA clubs in India,
           renowned throughout the fight world of Chennai and beyond. Rooted in Nishanth's unwavering passion for martial arts and fitness,
           our club represents more than just a training facility—it's a crucible where warriors are forged and champions are born.
@@ -93,14 +95,14 @@ export function AboutUs() {
           Dynamics 101 MMA has emerged as a powerhouse in the combat sports landscape, attracting a legion of dedicated individuals hungry for success.
           From local tournaments to national stages, our warriors fearlessly represent our club,fueled by the relentless pursuit of greatness that defines the clubs legacy.
         </p>
-        <div style={{ position: 'relative', overflow: 'hidden', margin: '20px 0'}}>
-          <img
-            src={images[currentImageIndex]}
-            alt={`about${currentImageIndex + 1}`}
-            style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
-          />
-        </div>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'yellow', textAlign: 'center', marginTop: '20px', padding: '10px 20px' }}>
+        <Button
+          className="bg-yellow-300 text-white rounded py-2 px-4 mt-4 mx-auto block"
+          onClick={() => console.log("Button clicked")}
+        >
+          Meet the team
+        </Button>
+        <Count />
+        <h2 className="text-2xl font-bold" style={{ color: '#F6E40C', textAlign: 'center', marginTop: '8px', padding: '2px 4px' }}>
           Join us at Dynamics 101 MMA, where the spirit of champions reigns supreme, and every punch thrown is a step closer to greatness. Check out our workout schedule and book a free trial class
         </h2>
         <button style={{ 
