@@ -57,7 +57,7 @@ interface Image {
       <div className="gallery-container" style={{ paddingTop: '30px' }}>
         <h1 className="heading text-center font-bold text-4xl">
         <span className="font-black-ops-one text-yellow-300">Alliances</span>
-  <span style={{color: '#B40101'}}> and </span>
+  <span style={{color: '#FFFFFF'}}> And </span>
   <span style={{color: '#B40101'}}>Affiliations</span>
         </h1>
         <div style={{ paddingTop: '20px' }}> {/* Adjust padding as needed */}

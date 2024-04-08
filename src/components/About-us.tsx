@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import aboutOne from '../assets/aboutOne.jpg';
 import aboutTwo from '../assets/aboutTwo.jpg';
-import aboutThree from '../assets/aboutThree.jpg';
+import aboutThreee from '../assets/aboutThreee.jpg';
 import aboutFour from '../assets/aboutFour.jpg';
 import aboutFive from '../assets/aboutFive.jpg';
 import Gallery from './Gallery';
@@ -12,7 +12,7 @@ import { Motto } from './motto';
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [aboutOne, aboutTwo, aboutThree, aboutFour, aboutFive];
+  const images = [aboutOne, aboutTwo, aboutThreee , aboutFour, aboutFive];
   const titles = ["BOXING", "MMA", "KICKBOXING", "MUAY THAI", "CALISTHENICS"];
 
   useEffect(() => {
@@ -48,19 +48,19 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="bg-black" style={{ padding: '10px' }}>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Adding padding between carousel and navbar */}
-      <div className="mt-8">
-        <div className="mb-4"> {/* Adding padding-bottom for the Motto */}
-          <Motto />
-        </div>
-        {/* Carousel positioned next to the h1 tag */}
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
-          <h1 style={{ fontSize: '2rem', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }} className="p-4"> {/* Adding padding for the h1 */}
-            <span className="font-black_ops_one self-center md:text-5xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA:</span> 
-            <span style={{ fontFamily: 'Black Ops One', color: '#B40101', fontSize: '2.5rem' }}>  Forging Champions in Chennai's Combat Sports Scene</span>
-          </h1>
+   <div className="bg-black" style={{ padding: '10px' }}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Adding padding between carousel and navbar */}
+    <div className="mt-8">
+      <div className="mb-4"> {/* Adding padding-bottom for the Motto */}
+        <Motto />
+      </div>
+      {/* Carousel positioned next to the h1 tag */}
+      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }} className="p-4"> {/* Adding padding for the h1 */}
+          <span className="font-black_ops_one self-center md:text-5xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA:</span> 
+          <span style={{ fontFamily: 'Black Ops One', color: '#B40101', fontSize: '2.5rem' }}>  Forging Champions in Chennai's Combat Sports Scene</span>
+        </h1>
 
             <div className="md:w-1/2 mt-3 md:mt-0">
               <div className="relative w-full h-auto overflow-hidden flex justify-center items-center">
@@ -105,9 +105,16 @@ const AboutUs = () => {
       <h3 className='text-center' style={{ fontWeight:'bold', color: '#FFD700' }}>{Clubs} <p style={{ fontSize:'15px', fontWeight:'none', color:'#fff' }}>Clubs</p></h3> 
     </div>
   </div>
-  <button className="bg-yellow-300 text-black border-none py-2 px-2 text-base font-bold rounded-md block mx-auto">
-Meet The Team
-</button>
+  <div className="flex flex-wrap justify-center mt-4 mb-4 gap-4">
+    <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md">
+        Meet The Team
+    </button>
+    <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md">
+        Workouts & Schedule
+    </button>
+</div>
+
+
           {/* End of Paragraph */}
 
           {/* Gallery Component */}
@@ -118,10 +125,7 @@ Meet The Team
 </h2>
 
 
-<div className="mb-10"></div>
-<button className="bg-yellow-300 text-black border-none py-2 px-2 text-base font-bold rounded-md block mx-auto">
-  Workouts & Schedule
-</button>
+
           </div>
         </div>
       </div>
