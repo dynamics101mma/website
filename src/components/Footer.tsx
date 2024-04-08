@@ -7,12 +7,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const footerStyle: React.CSSProperties = {
   backgroundColor: '#333',
   color: '#fff',
-  padding: '20px 0',
+  padding: '10px 0', // Reduced padding
   textAlign: 'center',
-  width: '100%',
-  position: 'fixed',
-  bottom: 0,
-  left: 0,
 };
 
 const containerStyle: React.CSSProperties = {
@@ -27,13 +23,13 @@ const containerStyle: React.CSSProperties = {
 const iconContainerStyle: React.CSSProperties = {
   display: 'flex',
   justifyContent: 'center', // Center icons horizontally
-  marginBottom: '10px', // Add some space between icons and links
+  marginBottom: '5px', // Reduced space between icons and links
 };
 
 const iconStyle: React.CSSProperties = {
-  fontSize: '2rem',
+  fontSize: '1.5rem', // Reduced icon size
   margin: '0 10px',
-  color: 'yellow',
+  color: '#B40101',
 };
 
 const linkStyle: React.CSSProperties = {
@@ -48,7 +44,7 @@ function Footer() {
     <footer style={footerStyle}>
       <div style={containerStyle}>
         <p>
-          &copy; 2024 <span style={{ color: 'yellow' }}>Dynamics101</span>
+          &copy; 2024      <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span>
         </p>
         <div style={iconContainerStyle}>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><InstagramIcon style={iconStyle} /></a>
@@ -67,4 +63,3 @@ function Footer() {
 }
 
 export default Footer;
-

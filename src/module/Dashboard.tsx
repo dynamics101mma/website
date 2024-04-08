@@ -4,7 +4,7 @@ import { Home } from '../components/Home';
 import { MainComponentContextType } from '../constants/page-constants';
 import { useMainComponent } from '../context/mainComponent.context';
 import { Clubs } from '../components/Clubs';
-import { AboutUs } from '../components/About-us';
+import AboutUs from '../components/About-us';
 import { Contact } from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -30,7 +30,7 @@ export default function Dashboard() {
       <div className="bg-[#21201e] flex flex-col justify-between">
         <TopNavbar />
         {renderComponent()}
-      {/* <Footer/> */}
+      <Footer/>
        
       </div>
     </>
