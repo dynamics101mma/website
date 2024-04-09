@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <MainComponentContextProvider>
-      <div>
+      <div className=''>
         <Dashboard />
       </div>
     </MainComponentContextProvider>

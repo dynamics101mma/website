@@ -12,7 +12,7 @@ function TopNavbar() {
             <div className=" px-10 flex flex-wrap items-center mx-auto p-4  justify-between">
                 <a onClick={()=>{mainComponent?.setMainComponent(MainComponentContextType.HOME)}} href="#" className="flex items-center  space-x-5 pl-4 rtl:space-x-reverse ">
                     <img src={dynamics_logo} className="h-10 w-10" alt="Flowbite Logo" />
-                    <span className=" font-black_ops_one self-center md:text-2xl text-xl whitespace-nowrap text-white">DYNAMICS 101 MMA</span>
+                    <span className=" font-black_ops_one self-center md:text-2xl text-xl whitespace-nowrap text-[#f9d112]">DYNAMICS 101 MMA</span>
                 </a>
                 <button data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>

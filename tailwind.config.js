@@ -8,29 +8,36 @@ module.exports = {
     fontFamily: {
       black_ops_one: ["black-ops-one"],
     },
-    patterns: {
-      opacities: {
-        100: "1",
-        80: ".80",
-        60: ".60",
-        40: ".40",
-        20: ".20",
-        10: ".10",
-        5: ".05",
+
+    extend: {
+      backgroundImage: {
+        'bg1': "url('../src/assets/accolades.jpg')",
+        'DFL': "url('../src/assets/DFL.jpeg')",
+        'aboutOne': "url('../src/assets/aboutOne.jpg')",
       },
-      sizes: {
-        1: "0.25rem",
-        2: "0.5rem",
-        4: "1rem",
-        6: "1.5rem",
-        8: "2rem",
-        16: "4rem",
-        20: "5rem",
-        24: "6rem",
-        32: "8rem",
-      }
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }
+        }
+      },
+      animation: {
+        typing: "typing 6s steps(35) infinite, blink .7s infinite"
+      },
     },
-    extend: {},
   },
   plugins: [require('tailwindcss-bg-patterns'),
   require("flowbite/plugin"),],
