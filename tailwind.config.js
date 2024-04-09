@@ -14,6 +14,7 @@ module.exports = {
         'bg1': "url('../src/assets/accolades.jpg')",
         'DFL': "url('../src/assets/DFL.jpeg')",
         'aboutOne': "url('../src/assets/aboutOne.jpg')",
+        'aboutFive': "url('../src/assets/aboutFive.jpg')",
       },
       keyframes: {
         typing: {

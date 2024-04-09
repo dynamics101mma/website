@@ -18,11 +18,14 @@ import dynoFit from '../assets/dynoFit.jpeg'
 import dynoKO from '../assets/dynoKO.jpeg';
 import dynoUltimate from '../assets/dynoUltimate.jpeg';
 import DFL from '../assets/DFL.jpeg'
+import aboutFive from '../assets/aboutFive.jpg'
 import FlashOnIcon from '@mui/icons-material/FlashOn';
+import { useMainComponent } from '../context/mainComponent.context';
+import { MainComponentContextType } from '../constants/page-constants';
 
 
 export function Home() {
-
+    const mainComponent = useMainComponent();
     const deviceType = useDeviceType();
     const [boxVisible, setBoxVisible] = useState(0);
     const settings = {
@@ -37,18 +40,18 @@ export function Home() {
     };
 
     const images = [
-        { src: WMF, alt: '...' },
-        { src: WMF, alt: '...' },
-        { src: WMF, alt: '...' },
+        { src: WMF, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
+        { src: WMF, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
+        { src: accolades, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
     ];
 
     const mobileImages = [
-        { src: check_mobile, alt: '...' },
-        { src: check_mobile_2, alt: '...' },
+        { src: check_mobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
+        { src: check_mobile_2, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
     ];
     const cardsData = [
         {
-            imageUrl: 'DFL',
+            imageUrl: 'aboutFive',
             title: 'DYNAMITE 101',
             description: 'This Package gives you the fitness that anyone in combat sports needs. Endurance & Agility are the most vital pillars for a fighter and we provide the best program to attain them.',
             pricing: [
@@ -103,19 +106,19 @@ export function Home() {
                     <Motto />
                 </div>
                 <div className='w-[100vw] h-[80vh] bg-transparent rounded-md'>
-                    <CarouselComponent images={deviceType === 'Desktop/Laptop' ? images : mobileImages} slideInterval={4000} className='h-[79vh]' />
+                    <CarouselComponent images={ images } slideInterval={4000} className='h-[79vh] object-contain' />
                 </div>
-                <div className="flex justify-center">
-                    <div className="grid md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 md:gap-4 gap-1 px-2 md:h-64">
+                <div className=" relative w-full">
+                    <div className=" relative w-full grid md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 md:gap-4 gap-1 px-2 md:h-64">
                         {cardsData.map((card, index) => (
-                            <div key={index} className='relative'>
+                            <div key={index} className='relative w-full'>
                                 <CardWithHover {...card} />
                             </div>
                         ))}
                     </div>
                 </div>
                 <div >
-                    <Button className='text-center flex items-center text-white bg-red-700' size='xl' color={'black'} >
+                    <Button className='text-center flex items-center text-white bg-red-700' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.ABOUTUS) }}>
                         View Our Schedules
                     </Button>
                 </div>
@@ -130,6 +133,23 @@ export function Home() {
                         <div > <img src={dynoUltimate} alt='...' /></div>
                         <div > <img src={dynoKO} alt='...' /></div>
                         <div > <img src={DFL} alt='...' /></div>
+                    </div>
+                </div>
+                <div className='mt-6 px-2'>
+                    <div className=' font-black_ops_one text-[#f9d112] text-center text-4xl mb-4'>
+                        BLOGS
+                    </div>
+                    <div className="flex gap-2 ">
+                        <a href='https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' target='_blank' >
+                            <Card className="max-w-sm bg-black" imgSrc={WMF} imgAlt='BLOGS'  >
+                                <div className='flex flex-col gap-3 justify-center items-center'>
+                                <h5 className="text-md text-pretty line-clamp-3 text-center font-bold tracking-tight text-yellow-300  ">
+                                    Indian Fighter<br />Thiru Balachandiran, Clinches WMF World Title Belt
+                                </h5>
+                                <button className='bg-[#f9d112] text-center w-1/2 rounded-md text-md p-2 font-semibold'>READ MORE...</button>
+                                </div>
+                            </Card>
+                        </a>
                     </div>
                 </div>
             </div>
