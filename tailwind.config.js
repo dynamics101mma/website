@@ -11,10 +11,9 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'bg1': "url('../src/assets/accolades.jpg')",
-        'DFL': "url('../src/assets/DFL.jpeg')",
-        'aboutOne': "url('../src/assets/aboutOne.jpg')",
-        'aboutFive': "url('../src/assets/aboutFive.jpg')",
+        'boxing': "url('../src/assets/aboutOne.jpg')",
+        'muaythai': "url('../src/assets/aboutFour.jpg')",
+        'calithenics': "url('../src/assets/aboutFive.jpg')"
       },
       keyframes: {
         typing: {
