@@ -1,10 +1,10 @@
 import React from 'react';
-import ContactLeft from './ContactLeft';
+// import ContactLeft from './ContactLeft';
 
 function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px', marginBottom: '20px' }}>
-      <ContactLeft />
+      {/* <ContactLeft /> */}
       <div style={{ width: '90%', maxWidth: '1000px', padding: '20px', border: '2px solid #f59e0b', marginTop: '20px', marginBottom: '20px' }}>
       <h1 className="text-yellow-300 font-blackOpsOne text-3xl uppercase mb-4 text-center" style={{ marginBottom: '10px' }}>CONTACT US</h1>
         <hr style={{ border: '1px solid #f59e0b', margin: '0', width: '100%' }} />
