@@ -15,7 +15,7 @@ import { Button, Card } from 'flowbite-react';
 import CardWithHover from './CardWithHover';
 import DFL from '../assets/DFL.png';
 import DU from '../assets/DU.png';
-import dynoFit from '../assets/dynoFit.jpeg';
+import dynoFit from '../assets/dynoFit.png';
 import DKO from '../assets/DKO.png';
 import DSO from '../assets/DSO.png';
 import DSO_Mobile from '../assets/DSO_Mobile.png';
@@ -125,11 +125,11 @@ export function Home() {
                     <div className=' font-black_ops_one text-[#f9d112] text-center text-4xl'>
                         EVENTS
                     </div>
-                    <div className="grid md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid-rows-4 gap-4 align-middle">
-                        <div > <img className=' max-h-52' src={dynoFit} alt='...' /></div>
-                        <div > <img className='ml-10 md:ml-0 max-h-52' src={DU} alt='...' /></div>
-                        <div > <img className='ml-10 md:ml-0 max-h-52' src={DKO} alt='...' /></div>
-                        <div > <img className='ml-10 md:ml-0 max-h-52' src={DFL} alt='...' /></div>
+                    <div className="grid md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid-rows-4 gap-4 align-middle pl-3">
+                        <div className='flex justify-center items-center'> <img className='ml-0 md:ml-0 max-h-52' src={dynoFit} alt='...' /></div>
+                        <div className='flex justify-center items-center'> <img className='ml-0 md:ml-0 max-h-52' src={DU} alt='...' /></div>
+                        <div className='flex justify-center items-center'> <img className='ml-0 md:ml-0 max-h-52' src={DKO} alt='...' /></div>
+                        <div className='flex justify-center items-center'> <img className='ml-0 md:ml-0 max-h-52' src={DFL} alt='...' /></div>
                     </div>
                 </div>
                 <div className='mt-6 px-2'>
@@ -140,7 +140,7 @@ export function Home() {
                         <a href='https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' target='_blank' >
                             <Card className="max-w-sm bg-black" imgSrc={WMF} imgAlt='BLOGS'  >
                                 <div className='flex flex-col gap-3 justify-center items-center'>
-                                    <h5 className="text-md text-pretty line-clamp-3 text-center font-bold tracking-tight text-yellow-300  ">
+                                    <h5 className="text-md text-pretty line-clamp-3 text-center font-bold tracking-tight text-[#f9d112]  ">
                                         Indian Fighter<br />Thiru Balachandiran, Clinches WMF World Title Belt
                                     </h5>
                                     <button className='bg-[#f9d112] text-center w-1/2 rounded-md text-md p-2 font-semibold'>READ MORE...</button>
@@ -190,7 +190,7 @@ export function Home() {
                                                 <input type="text" size={20} className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-md border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Query" />
                                             </div>
                                         </div>
-                                        <div className="pt-4 flex items-center space-x-4 ">
+                                        <div className="pt-4 flex items-center space-x-4">
                                             <button className="bg-red-700 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Send</button>
                                         </div>
                                     </div>
