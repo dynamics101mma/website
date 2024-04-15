@@ -3,7 +3,7 @@ import React from 'react';
 // Import the Card component from React Flowbite
 
 interface CardWithHoverProps {
-    imageUrl: string;
+    imageUrl: any;
     title: string;
     description: string;
     pricing: { duration: string; price: string }[];
@@ -11,7 +11,7 @@ interface CardWithHoverProps {
 
 const CardWithHover: React.FC<CardWithHoverProps> = ({ imageUrl, title, description, pricing }) => {
     return (
-        <div className='h-full bg-aboutOne bg-cover rounded-lg'>
+        <div className={`h-full bg-${imageUrl} bg-cover rounded-lg`}>
             <div className={` h-full max-w-full overflow-auto group bg-gray-800/80 bg p-5 border rounded-lg border-white/50`}>
                 <div className="hidden group-hover:flex group-hover:flex-col relative h-full justify-around ">
                     <h5 className="text-center text-xl font-normal tracking-tight text-white font-black_ops_one">{title}</h5>
