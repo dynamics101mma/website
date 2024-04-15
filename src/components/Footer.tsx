@@ -7,29 +7,28 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const footerStyle: React.CSSProperties = {
   backgroundColor: '#333',
   color: '#fff',
-  padding: '10px 0', // Reduced padding
+  padding: '10px 20px', // Reduced padding on sides
   textAlign: 'center',
 };
 
 const containerStyle: React.CSSProperties = {
-  maxWidth: '500px', // Set maximum width to 500px for mobile responsiveness
-  margin: '0 auto',
-  padding: '0 20px', // Added padding
+  maxWidth: '100%', // Adjusted width to fill the container
+  padding: '0 20px', // Added padding on sides
   display: 'flex',
-  flexDirection: 'column', // Arrange items in a column for mobile
-  alignItems: 'center', // Align items to the center horizontally
+  alignItems: 'center', // Center content vertically
+  justifyContent: 'space-between', // Distribute content evenly
+  flexWrap: 'wrap', // Allow content to wrap to new line on small screens
 };
 
 const iconContainerStyle: React.CSSProperties = {
   display: 'flex',
-  justifyContent: 'center', // Center icons horizontally
-  marginBottom: '5px', // Reduced space between icons and links
+  marginLeft:'50px'
 };
 
 const iconStyle: React.CSSProperties = {
   fontSize: '1.5rem', // Reduced icon size
   margin: '0 10px',
-  color: '#B40101',
+  color: '#D80000', // Changed icon color to #D80000
 };
 
 const linkStyle: React.CSSProperties = {
@@ -43,9 +42,10 @@ function Footer() {
   return (
     <footer style={footerStyle}>
       <div style={containerStyle}>
-        <p>
-          &copy; 2024      <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span>
-        </p>
+      <p style={{ marginLeft: '10px' }}>
+      &copy; 2024 <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span>
+       </p>
+
         <div style={iconContainerStyle}>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><InstagramIcon style={iconStyle} /></a>
           <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><YouTubeIcon style={iconStyle} /></a>
