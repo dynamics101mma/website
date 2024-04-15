@@ -32,7 +32,7 @@ function App() {
           <label htmlFor="query" style={{ color: '#FFFFFF' }}>Query</label>
           <textarea id="query" name="query" rows={4} style={{ width: '100%', padding: '8px', boxSizing: 'border-box' }} required />
         </div>
-        <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md mx-auto" style={{ display: 'block' }}>
+        <button className="bg-red-600 text-black border-none py-2 px-4 text-base font-bold rounded-md mx-auto" style={{ display: 'block' }}>
           Submit
         </button>
       </div>

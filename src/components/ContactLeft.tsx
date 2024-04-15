@@ -61,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
     gap: theme.spacing(3),
   },
   icon: {
-    color: '#5D5D5D',
     cursor: 'pointer',
     '&:hover': {
       opacity: 0.8,
@@ -98,11 +97,11 @@ const ContactLeft = () => {
         <p className="font-blackOpsOne text-white">FITNESS AND FIGHT CLUB</p>
 
         <div className={classes.contactInfo} style={{ marginTop: '10px' }}>
-          <PhoneIcon style={{ marginRight: '4px', fontWeight: 'bold', color: '#B40101' }} />
+          <PhoneIcon style={{ marginRight: '4px', fontWeight: 'bold', color: '#D80000' }} />
           <span style={{ color: 'white' }}>+91 9940064226</span>
         </div>
         <div className={classes.contactInfo}>
-          <EmailIcon style={{ marginRight: '4px', fontWeight: 'bold', color: '#B40101' }} />
+          <EmailIcon style={{ marginRight: '4px', fontWeight: 'bold', color: '#D80000' }} />
           <span style={{ color: 'white' }}>dynamics101mma@gmail.com</span>
         </div>
         <iframe
@@ -113,10 +112,10 @@ const ContactLeft = () => {
       <div>
         <h2 className="text-base uppercase font-titleFont mb-4" style={{ color: '#FFFFFF' }}>Follow Us</h2>
         <div className={classes.iconContainer}>
-          <InstagramIcon className={classes.icon} style={{ color: '#DC0606 ' }} onClick={() => window.open('https://www.instagram.com/dynamics101mma/', '_blank')} />
-          <YouTubeIcon className={classes.icon} style={{ color: '#DC0606' }} onClick={() => window.open('https://www.youtube.com/results?search_query=dynamics+101', '_blank')} />
-          <WhatsAppIcon className={classes.icon} style={{ color: '#B40101' }} onClick={() => window.open('https://wa.me/919940064226', '_blank')} />
-          <LinkedInIcon className={classes.icon} style={{ color: '#B40101' }} onClick={() => window.open('https://www.linkedin.com/company/dynamics101mma/', '_blank')} />
+          <InstagramIcon className={classes.icon + ' text-red-600'} onClick={() => window.open('https://www.instagram.com/dynamics101mma/', '_blank')} />
+          <YouTubeIcon className={classes.icon + ' text-red-600'} onClick={() => window.open('https://www.youtube.com/results?search_query=dynamics+101', '_blank')} />
+          <WhatsAppIcon className={classes.icon + ' text-red-600'} onClick={() => window.open('https://wa.me/919940064226', '_blank')} />
+          <LinkedInIcon className={classes.icon + ' text-red-600'} onClick={() => window.open('https://www.linkedin.com/company/dynamics101mma/', '_blank')} />
         </div>
       </div>
     </div>
