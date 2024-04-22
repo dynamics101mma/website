@@ -102,9 +102,16 @@ export function Home() {
                 <div className='w-[100vw] flex items-center justify-center'>
                     <Motto />
                 </div>
+                
                 <div className='w-[100vw] h-[80vh] bg-transparent rounded-md'>
                     <CarouselComponent images={deviceType === 'Mobile' ? mobileImages : images} slideInterval={4000} className='h-[79vh] object-cover' />
                 </div>
+                <br></br>
+                
+                <div className=' font-black_ops_one text-[#f9d112] text-center text-4xl'>
+                      PACKAGES
+                    </div>
+                    <br></br>
                 <div className=" relative w-full">
                     <div className=" relative w-full grid md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 md:gap-4 gap-1 px-2 md:h-64">
                         {cardsData.map((card, index) => (
@@ -115,6 +122,7 @@ export function Home() {
                     </div>
                 </div>
                 <div >
+                    <br></br>
                     <Button className='text-center flex items-center text-white bg-red-700' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.ABOUTUS) }}>
                         View Our Schedules
                     </Button>
