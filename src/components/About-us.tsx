@@ -57,9 +57,8 @@ const AboutUs = () => {
       </div>
       {/* Carousel positioned next to the h1 tag */}
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }} className="p-4"> {/* Adding padding for the h1 */}
-          <span className="font-black_ops_one self-center md:text-5xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA:</span> 
-          <span style={{ fontFamily: 'Black Ops One', color: '#B40101', fontSize: '2.5rem' }}>  Forging Champions in Chennai's Combat Sports Scene</span>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }} className="p-4"> 
+        <span className="font-black_ops_one self-center md:text-5xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA:</span >          <span style={{ fontFamily: 'Black Ops One', color: '#B40101', fontSize: '2.5rem' }}>  Forging Champions in Chennai's Combat Sports Scene</span>
         </h1>
 
             <div className="md:w-1/2 mt-3 md:mt-0">
@@ -110,7 +109,7 @@ const AboutUs = () => {
         Meet The Team
     </button>
     <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md">
-        Workouts & Schedule
+       Our Schedule
     </button>
 </div>
 
