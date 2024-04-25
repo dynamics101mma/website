@@ -7,6 +7,9 @@ import { Clubs } from '../components/Clubs';
 import AboutUs from '../components/About-us';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Schedule from '../components/Schedule';
+import { Schedules } from '../components/Schedules';
+import { Teams } from '../components/Teams';
 
 
 
@@ -20,6 +23,10 @@ export default function Dashboard() {
         return <div><Contact /></div>
       case MainComponentContextType.CLUBS:
         return <div><Clubs /></div>
+      case MainComponentContextType.SCHEDULES:
+        return <div><Schedules /></div>
+      case MainComponentContextType.TEAMS:
+        return <div><Teams /></div>
       default:
         return <div><Home /></div>
     }

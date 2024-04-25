@@ -1,5 +1,4 @@
 import React from 'react'
-import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 
 export function Motto() {
