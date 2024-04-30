@@ -1,18 +1,32 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useRef } from 'react';
 import axios from 'axios';
 import { IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { sendEmail } from '../utils/sendEmail';
+
+
+interface FormDataType {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  queryTitle: string;
+  query: string;
+}
+
+// Initialize your form data state with the initial values
+const initialFormData: FormDataType = {
+  name: '',
+  email: '',
+  phoneNumber: '',
+  queryTitle: '',
+  query: ''
+};
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    queryTitle: '',
-    query: ''
-  });
+  const [formData, setFormData] = useState<FormDataType>(initialFormData);
+  const form = useRef();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -24,16 +38,8 @@ function App() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/ContactUs/', formData); 
-      console.log('Response:', response.data); // You can handle the response as needed
-      // Optionally, you can reset the form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        phoneNumber: '',
-        queryTitle: 'option1',
-        query: ''
-      });
+      // console.log('handleSubmit',);
+      // sendEmail(formData as unknown as HTMLFormElement); Email is not responding properly
     } catch (error) {
       console.error('Error:', error); // Handle error if the request fails
     }
@@ -56,7 +62,7 @@ function App() {
       <div style={{ width: '90%', maxWidth: '1000px', padding: '20px', border: '2px solid #f59e0b', marginTop: '20px', marginBottom: '20px', borderRadius: '40px' }}>
         <h1 className="text-yellow-300 font-blackOpsOne text-3xl uppercase mb-4 text-center" style={{ marginBottom: '10px' }}>CONTACT US</h1>
         <hr style={{ border: '1px solid #f59e0b', marginBottom: '15px', width: '100%' }} />
-        <form onSubmit={handleSubmit}>
+        <form ref={form.current}  onSubmit={handleSubmit}>
           <div style={{ marginBottom: '40px' }}>
             <label htmlFor="name" style={{ color: '#FFFFFF' }}>Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '5px' }} required />
@@ -67,7 +73,7 @@ function App() {
           </div>
           <div style={{ marginBottom: '40px' }}>
             <label htmlFor="phone" style={{ color: '#FFFFFF' }}>Phone Number</label>
-            <input type="number" id="phone" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '5px' }} required />
+            <input type="tel" id="phone" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '5px' }} required />
           </div>
           <div style={{ marginBottom: '40px' }}>
             <label htmlFor="queryTitle" style={{ color: '#FFFFFF' }}>Query Title</label>
@@ -81,7 +87,7 @@ function App() {
             <label htmlFor="query" style={{ color: '#FFFFFF' }}>Query</label>
             <textarea id="query" name="query" value={formData.query} onChange={handleChange} rows={4} style={{ width: '100%', padding: '8px', boxSizing: 'border-box', borderRadius: '5px' }} required />
           </div>
-          <button type="submit" className="bg-red-600 text-white border-none py-2 px-4 text-base font-bold rounded-md mx-auto" style={{ display: 'block' }}>
+          <button value="Send" type="submit" className="bg-red-600 text-white border-none py-2 px-4 text-base font-bold rounded-md mx-auto" style={{ display: 'block' }}>
             Submit
           </button>
         </form>

@@ -37,7 +37,7 @@ export function Home() {
         { src: offerStu, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
         { src: offerWomen, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
         { src: lockerRoom, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
-        { src: DSO, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
+        // { src: DSO, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
     ];
 
     const mobileImages = [
@@ -45,7 +45,7 @@ export function Home() {
         { src: offerStuMobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
         { src: offerWomenMobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
         { src: lockerRoomMobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
-        { src: DSO_Mobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
+        // { src: DSO_Mobile, alt: '...', link: 'https://lockerroom.in/blog/view/thiru-balachandiran-wmf-world-title' },
 
     ];
     const cardsData = [
