@@ -19,6 +19,8 @@ import dynoFit from '../assets/dynoFit.png';
 import DKO from '../assets/DKO.png';
 import DSO from '../assets/DSO.png';
 import DSO_Mobile from '../assets/DSO_Mobile.png';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 import { useMainComponent } from '../context/mainComponent.context';
 import { MainComponentContextType } from '../constants/page-constants';
@@ -123,7 +125,7 @@ export function Home() {
                 </div>
                 <div >
                     <br></br>
-                    <Button className='text-center flex items-center text-white bg-red-700' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.ABOUTUS) }}>
+                    <Button className='text-center flex items-center text-white bg-red-700' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.SCHEDULES) }}>
                         View Our Schedules
                     </Button>
                 </div>
@@ -160,14 +162,21 @@ export function Home() {
                 <div className='mt-6 px-2'>
                     <div className="flex gap-2 ">
                         <Testimonial />
+                        
                     </div>
+                    
                 </div>
                 <div className='max-w-screen md:flex text-center justify-center items-center'>
-                    <h1 className=' font-black_ops_one text-[#f9d112] text-3xl'>Contact US :</h1>
-                    <a href="tell:9940064226" className='text-white text-2xl'>&nbsp;&nbsp;9940064226 </a>
-                    <p className='text-gray-500 text-3xl'>&nbsp;&nbsp;| </p>
-                    <a href='mailto:dynamics101mma@gmail.com' className='text-red-700 text-2xl'>&nbsp;&nbsp;dynamics101mma@gmail.com </a>
-                </div>
+    <h1 className='font-black_ops_one text-[#f9d112] text-3xl'> 
+        <PhoneIcon sx={{ fontSize: 30, color: '#f9d112' }} />
+        <a href="tel:9940064226" className='text-white text-2xl'>&nbsp;&nbsp;9940064226 </a>
+    </h1>
+    <p className='text-gray-500 text-3xl'>&nbsp;&nbsp; |</p> &nbsp;&nbsp;
+    <h1 className='font-black_ops_one text-[#f9d112] text-3xl'>
+        <EmailIcon sx={{ fontSize: 30, color: '#f9d112' }} />
+        <a href='mailto:dynamics101mma@gmail.com' className='text-red-700 text-2xl'>&nbsp;&nbsp;dynamics101mma@gmail.com </a>
+    </h1>
+</div>
                 <div>
                     <div className="flex flex-col justify-center sm:py-1">
                         <div className="relative py-3 sm:max-w-xl sm:mx-auto">

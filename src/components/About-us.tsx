@@ -9,8 +9,14 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import Groups3Icon from '@mui/icons-material/Groups3';
 import { Motto } from './motto';
+import { useMainComponent } from '../context/mainComponent.context';
+import { MainComponentContextType } from '../constants/page-constants';
+import { Button } from 'flowbite-react';
+
+
 
 const AboutUs = () => {
+  const mainComponent = useMainComponent();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [aboutOne, aboutTwo, aboutThreee , aboutFour, aboutFive];
   const titles = ["BOXING", "MMA", "KICKBOXING", "MUAY THAI", "CALISTHENICS"];
@@ -50,12 +56,12 @@ const AboutUs = () => {
   return (
    <div className="bg-black" style={{ padding: '10px' }}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Adding padding between carousel and navbar */}
+
     <div className="mt-8">
-      <div className="mb-4"> {/* Adding padding-bottom for the Motto */}
+      <div className="mb-4"> 
         <Motto />
       </div>
-      {/* Carousel positioned next to the h1 tag */}
+
       <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
         <h1 style={{ fontSize: '2rem', fontWeight: 'bold', letterSpacing: '1px', textAlign: 'center' }} className="p-4"> 
         <span className="font-black_ops_one self-center md:text-5xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA:</span >          <span style={{ fontFamily: 'Black Ops One', color: '#B40101', fontSize: '2.5rem' }}>  Forging Champions in Chennai's Combat Sports Scene</span>
@@ -70,9 +76,9 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-          {/* End of Carousel */}
+    
 
-          {/* Paragraph below the h1 tag */}
+     
           <div className="text-white text-center mt-4">
             <p>
               Established in 2019 by the formidable coach Nishanth, a former national MMA champion and revered gym trainer, <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span > stands as one of the most dominating striking-based MMA clubs in India,
@@ -81,13 +87,13 @@ const AboutUs = () => {
               With a diverse array of programs including Brazilian Jiu-Jitsu, Muay Thai, Boxing, Kickboxing, Wrestling, and Strength and Conditioning,
                 DYNAMICS 101 MMA offers a comprehensive training experience for enthusiasts of all levels. Under the expert guidance of elite coaches handpicked by Nishanth himself,
               our members embark on a journey of self-discovery and mastery, pushing the boundaries of their physical and mental prowess.
-              ButDYNAMICS 101 MMA is more than just a training ground—it's a community united by a shared passion for combat sports.
+              But DYNAMICS 101 MMA is more than just a training ground—it's a community united by a shared passion for combat sports.
               Here, camaraderie thrives, and bonds forged through sweat and determination transcend the confines of the gym. Our ethos of inclusivity welcomes warriors of all ages and backgrounds, fostering an environment where everyone can thrive and excel.        
                DYNAMICS 101 MMA has emerged as a powerhouse in the combat sports landscape, attracting a legion of dedicated individuals hungry for success.
               From local tournaments to national stages, our warriors fearlessly represent our club, fueled by the relentless pursuit of greatness that defines the club's legacy.
             </p>
           </div>
-         {/* Counter and other elements */}
+   
 
 <div className="text-white text-center mt-8">
   <div className="pt-2 pb-2 " style={{display:'flex',justifyContent:'space-around'}} >
@@ -104,25 +110,24 @@ const AboutUs = () => {
       <h3 className='text-center' style={{ fontWeight:'bold', color: '#FFD700' }}>{Clubs} <p style={{ fontSize:'15px', fontWeight:'none', color:'#fff' }}>Clubs</p></h3> 
     </div>
   </div>
-  <div className="flex flex-wrap justify-center mt-4 mb-4 gap-4">
-    <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md">
-        Meet The Team
-    </button>
-    <button className="bg-yellow-300 text-black border-none py-2 px-4 text-base font-bold rounded-md">
-       Our Schedule
-    </button>
-</div>
-
-
-          {/* End of Paragraph */}
-
-          {/* Gallery Component */}
-          <Gallery />
-          
-          <h2 className="text-2xl font-bold" style={{ color: '#FFFF', marginTop: '20px', padding: '2px 4px' }}>
+  <h2 className="text-2xl font-bold" style={{ color: '#FFFF', marginTop: '20px', padding: '2px 4px' }}>
   Join us at <span className="font-black_ops_one self-center md:text-2xl text-xl whitespace-nowrap"><span className="text-yellow-300">DYNAMICS 101 MMA</span></span> , where the spirit of champions reigns supreme, and every punch thrown is a step closer to greatness. Check out our workout schedule and book a free trial class
 </h2>
 
+  <div className="flex flex-wrap justify-center mt-4 mb-4 gap-4">
+  <Button className='text-center flex items-center text-white bg-[#f9d112]' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.SCHEDULES) }} style={{ color: 'black' }}>
+    View Our Schedule
+</Button>
+<Button className='text-center flex items-center text-white bg-[#f9d112]' size='xl' color={'black'} onClick={() => { mainComponent?.setMainComponent(MainComponentContextType.TEAMS) }} style={{ color: 'black' }}>
+    Meet The Team
+</Button>
+
+</div>
+<br></br>
+
+          <Gallery />
+          
+   
 
 
           </div>

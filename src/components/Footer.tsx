@@ -22,13 +22,12 @@ const containerStyle: React.CSSProperties = {
 
 const iconContainerStyle: React.CSSProperties = {
   display: 'flex',
-  marginLeft:'50px'
+  marginLeft: '50px',
 };
 
 const iconStyle: React.CSSProperties = {
   fontSize: '1.5rem', // Reduced icon size
   margin: '0 10px',
-  color: '#D80000', // Changed icon color to #D80000
 };
 
 const linkStyle: React.CSSProperties = {
@@ -42,16 +41,18 @@ function Footer() {
   return (
     <footer style={footerStyle}>
       <div style={containerStyle}>
-      <p style={{ marginLeft: '10px' }}>
-      &copy; 2024 <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span>
-       </p>
+        <p style={{ marginLeft: '10px' }}>
+          &copy; 2024 <span className="font-black_ops_one self-center md:text-1xl text-xl whitespace-nowrap text-yellow-300">DYNAMICS 101 MMA</span>
+        </p>
 
         <div style={iconContainerStyle}>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><InstagramIcon style={iconStyle} /></a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><YouTubeIcon style={iconStyle} /></a>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"><WhatsAppIcon style={iconStyle} /></a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><LinkedInIcon style={iconStyle} /></a>
-        </div>
+  <a href="https://www.instagram.com/dynamics101mma/" target="_blank" rel="noopener noreferrer"><InstagramIcon style={{ ...iconStyle, color: '#E1306C' }} /></a>
+  <a href="https://www.youtube.com/@dynamics101mma" target="_blank" rel="noopener noreferrer"><YouTubeIcon style={{ ...iconStyle, color: '#FF0000' }} /></a>
+  <a href="https://wa.me/919940064226" target="_blank" rel="noopener noreferrer"><WhatsAppIcon style={{ ...iconStyle, color: '#25D366' }} /></a>
+  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><LinkedInIcon style={{ ...iconStyle, color: '#0A66C2' }} /></a>
+</div>
+
+
         <div>
           <a href="/refund-cancellation" style={linkStyle}>R&C Policy</a>
           <a href="/terms-of-use" style={linkStyle}>Terms of Use</a>

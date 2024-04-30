@@ -50,7 +50,7 @@ interface Image {
       { src: groupFour, alt: 'BFI' },
       { src: groupFive, alt: 'BFI' },
       { src: groupSix, alt: '' },
-      // Add more images as needed
+   
     ];
   
     return (
@@ -60,7 +60,7 @@ interface Image {
   <span style={{color: '#FFFFFF'}}> And </span>
   <span style={{color: '#B40101'}}>Affiliations</span>
         </h1>
-        <div style={{ paddingTop: '20px' }}> {/* Adjust padding as needed */}
+        <div style={{ paddingTop: '20px' }}>
           <SlideShow images={images} />
         </div>
       </div>
